@@ -20,7 +20,7 @@ def part2 (f: list[str]) -> int:
 
 if __name__ == "__main__":
     fname = sys.argv[1] if len(sys.argv) > 1 else 'input'
-    f = [l.strip().split() for l in open("input")]
+    f = [l.strip().split() for l in open(fname)]
     print("Part 1: ", part1(deepcopy(f)))
     print("Part 2: ", part2(deepcopy(f)))
 
