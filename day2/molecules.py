@@ -1,4 +1,6 @@
-
+import sys
+from collections import Counter
+from copy import deepcopy
 
 def part1 (s: str) -> int: 
     
@@ -20,4 +22,7 @@ def part1 (s: str) -> int:
  
 
 if __name__ == "__main__": 
+    fname = sys.argv[1] if len(sys.argv) > 1 else 'input'
+    f = [l.strip().split() for l in open(fname)]
+    print ("Part 1: ", part1(deepcopy(f)))
     print("Base: ", part1("HOH"))
